@@ -2,6 +2,7 @@
 
 I work on AI infrastructure, LLM serving, inference optimization, and agent systems.
 
+- 🎓 Master's student in Computer Technology at Northwestern Polytechnical University (NWPU)
 - 💻 Stack: Python, PyTorch, vLLM, llama.cpp / ggml, Triton, CANN / AscendC
 
 ---
@@ -28,6 +29,6 @@ Selected pull requests and ongoing work:
 ## 🏆 Selected Competitions & Awards
 
 - **2026 · IEEE AICAS Grand Challenge:** 7th place, efficient VLM inference and optimization
-- **2026 · 第八届 CCF 开源创新大赛:** Third Prize, Mooncake KVCache
-- **2025 · 华为昇思模型开发挑战赛:** 3rd place (Silver), S1-MOE track
-- **沐曦股份首届开源英才夏令营:** Best Engineering Practice Award
+- **2026 · 8th CCF Open Source Innovation Competition:** Third Prize, Mooncake KVCache
+- **2025 · Huawei MindSpore Model Development Challenge:** 3rd place (Silver), S1-MOE track
+- **MetaX Open Source Talent Camp:** Best Engineering Practice Award
