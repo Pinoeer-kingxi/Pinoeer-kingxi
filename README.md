@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Pinoeer-kingxi
+# 👋 Hi, I'm weixi
 
 **AI Infrastructure · LLM Serving · Inference Optimization · Agent Systems**
 
