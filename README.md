@@ -1,30 +1,47 @@
-## 👋 Hi, I'm Pinoeer-kingxi
+# 👋 Hi, I'm Pinoeer-kingxi
 
-I work on AI infrastructure, LLM serving, inference optimization, and agent systems.
+**AI Infrastructure · LLM Serving · Inference Optimization · Agent Systems**
 
-- 🎓 Master's student in Computer Technology at Northwestern Polytechnical University (NWPU)
-- 💻 Stack: Python, PyTorch, vLLM, llama.cpp / ggml, Triton, CANN / AscendC
+I'm a master's student in Computer Technology at Northwestern Polytechnical University (NWPU). I work on efficient inference for language and multimodal models, from GPU/NPU kernels and runtime scheduling to KV-cache reuse and agent infrastructure.
 
----
+## 🛠️ Selected Engineering Work
 
-## 🛠️ What I'm Working On
+### [MiniCPM-o on Ascend](https://github.com/Pinoeer-kingxi/llama.cpp-omni/tree/feat/ascend-cann)
+Multimodal inference optimization in llama.cpp / ggml, spanning vision, language, and speech.
+- Split the pipeline across two NPUs and overlapped CPU preprocessing with NPU encoding
+- Optimized LLM/TTS execution with CANN Flash Attention, reusable graph execution, and reduced redundant prefill; developed AscendC operators for Token2Wav and explored mixed W8A8 quantization
 
-- ⚡ **Efficient inference:** KV-cache management, prefix caching, CUDA graphs, quantization, and MoE
-- 🧩 **Multimodal serving:** GPU / Ascend NPU optimization and disaggregated inference
-- 🔬 **Agent infrastructure:** state management, RAG, and rollout efficiency
+### [Efficient VLM Inference](https://github.com/Pinoeer-kingxi/AICASGC)
+Qwen3-VL-2B-Instruct optimization for the IEEE AICAS 2026 Grand Challenge.
+- Reused bucketed static KV caches and visual prefixes, fused QKV and gate/up projections, and implemented Triton RMSNorm/SwiGLU kernels
+- Built a single-token decode path with static buffers and CUDA Graph replay to reduce Python scheduling and kernel-launch overhead
 
----
+### [Mooncake EPD & Agent State](https://github.com/kvcache-ai/Mooncake/pull/2836)
+Encoder-Prefill-Decode disaggregation and reusable agent state. **Upstream PR open.**
+- Passed visual features and KV state between stages, with version/model checks and explicit transfer lifetimes
+- Implemented shared read-only KV pages, copy-on-write branching, and Store-backed state retrieval; reduced repeated media transfer through token-only Decode requests
+
+### [MetaX C500 Kernel Optimization](https://github.com/Pinoeer-kingxi/TileOPs-Metax/tree/feat/quant-per-channel-cast-fused)
+Per-channel quantization and cast fusion with TileLang.
+- Unified four operator variants and tuned tiling, thread mapping, and local/shared-memory staging
+- Built correctness tests, fixed-baseline benchmarks, and profiler/Roofline analysis alongside the kernel implementation
 
 ## 🌱 Open Source
 
-Selected pull requests and ongoing work:
+**Merged contributions**
+- **MindSpore:** model ports covering [Shallow RNN](https://github.com/mindspore-ai/contrib/pull/234), [hierarchical memory for RL agents](https://github.com/mindspore-ai/contrib/pull/256), [Fisher-information analysis](https://github.com/mindspore-ai/contrib/pull/259), and [GANimation](https://github.com/mindspore-ai/contrib/pull/260)
 
-- **[vLLM](https://github.com/vllm-project/vllm)**: multimodal prefix caching and Mamba cache boundaries ([PR](https://github.com/vllm-project/vllm/pull/56818))
-- **[vLLM-Omni](https://github.com/vllm-project/vllm-omni)**: prefix-cache lifecycle and Qwen3-Omni inference correctness ([PR](https://github.com/vllm-project/vllm-omni/pull/8221), [PR](https://github.com/vllm-project/vllm-omni/pull/8327))
-- **[Mooncake](https://github.com/kvcache-ai/Mooncake)**: multimodal disaggregated serving and agent-state management ([PR](https://github.com/kvcache-ai/Mooncake/pull/2836))
-- **[Relax](https://github.com/redai-studio/Relax)**: agentic rollouts and speculative-decoding metrics ([PR](https://github.com/redai-studio/Relax/pull/391))
+**Ongoing pull requests**
+- **vLLM:** [multimodal prefix-cache boundaries for Mamba models](https://github.com/vllm-project/vllm/pull/56818) · Draft
+- **vLLM-Omni:** [prefix-cache input replacement and request ownership](https://github.com/vllm-project/vllm-omni/pull/8221) and [Qwen3-Omni Code2Wav dtype correctness](https://github.com/vllm-project/vllm-omni/pull/8327) · Drafts
+- **Mooncake:** [multimodal and agent-state disaggregation](https://github.com/kvcache-ai/Mooncake/pull/2836) · Open
+- **Relax:** [speculative-decoding metrics for agentic rollouts](https://github.com/redai-studio/Relax/pull/391) · Open
 
----
+## 🔧 Toolkit
+
+- **Inference & kernels:** Python, PyTorch, vLLM, llama.cpp / ggml, Triton, TileLang, CANN / AscendC
+- **Optimization:** KV/prefix caching, CUDA Graphs, quantization, MoE expert batching, profiling, and regression testing
+- **Agents & retrieval:** ReAct, RAG, Milvus, MCP, state management, and hybrid retrieval
 
 ## 🏆 Selected Competitions & Awards
 
@@ -32,3 +49,9 @@ Selected pull requests and ongoing work:
 - **2026 · 8th CCF Open Source Innovation Competition:** Third Prize, Mooncake KVCache
 - **2025 · Huawei MindSpore Model Development Challenge:** 3rd place (Silver), S1-MOE track
 - **MetaX Open Source Talent Camp:** Best Engineering Practice Award
+- **Alibaba Higress AI Gateway Development Challenge:** Third Prize
+
+## 🎓 Education
+
+- **Northwestern Polytechnical University** · Master's in Computer Technology · Sep 2025–present
+- **Shaanxi Normal University** · Bachelor's in Software Engineering · Sep 2021–Jul 2025
