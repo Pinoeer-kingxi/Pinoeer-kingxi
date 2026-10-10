@@ -2,6 +2,16 @@
 
 I'm a master's student in Computer Technology at Northwestern Polytechnical University (NWPU). I work on LLM and multimodal inference, including GPU/NPU kernels, runtime scheduling, KV caching, and agent infrastructure.
 
+I'm seeking internship opportunities in **efficient LLM inference and AI systems**, remote or on-site. Contact: [weixilin307@gmail.com](mailto:weixilin307@gmail.com).
+
+## Activity
+
+![Profile views](https://komarev.com/ghpvc/?username=Pinoeer-kingxi&label=Profile+views&color=6e7781&style=flat)
+[![Merged upstream PRs](https://img.shields.io/github/issues-search?query=author%3APinoeer-kingxi%20is%3Apr%20is%3Amerged%20-user%3APinoeer-kingxi%20is%3Apublic&label=merged%20upstream%20PRs&color=8957e5)](https://github.com/search?q=author%3APinoeer-kingxi%20is%3Apr%20is%3Amerged%20-user%3APinoeer-kingxi%20is%3Apublic&type=pullrequests)
+[![Open upstream PRs](https://img.shields.io/github/issues-search?query=author%3APinoeer-kingxi%20is%3Apr%20is%3Aopen%20-user%3APinoeer-kingxi%20is%3Apublic&label=open%20upstream%20PRs&color=238636)](https://github.com/search?q=author%3APinoeer-kingxi%20is%3Apr%20is%3Aopen%20-user%3APinoeer-kingxi%20is%3Apublic&type=pullrequests)
+
+<sub>PR counts cover my public authored PRs outside my own repositories; open PRs include drafts. Badges update automatically but may lag due to caching. Profile views count badge loads since this counter was enabled, not unique visitors or historical traffic.</sub>
+
 ## Open source
 
 ### Merged
