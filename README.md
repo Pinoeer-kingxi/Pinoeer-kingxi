@@ -1,6 +1,6 @@
 # Hi, I'm weixi
 
-I'm a master's student in Computer Technology at Northwestern Polytechnical University (NWPU). I work on LLM and multimodal inference, including GPU/NPU kernels, runtime scheduling, KV caching, and agent infrastructure.
+I'm a master's student in Computer Technology at Northwestern Polytechnical University (NWPU). I work on LLM training and multimodal inference systems, including GPU/NPU kernels, runtime scheduling, KV caching, and agent infrastructure.
 
 I'm seeking internship opportunities in **efficient LLM inference and AI systems**, remote or on-site. Contact: [weixilin307@gmail.com](mailto:weixilin307@gmail.com).
 
@@ -16,22 +16,39 @@ I'm seeking internship opportunities in **efficient LLM inference and AI systems
 
 ### Merged
 
+- **vLLM-Omni:** Added remote SeedVR2 video restoration to ComfyUI, preserving frame count, source FPS and supported audio, with cancellation handling and workflow templates. [#8505](https://github.com/vllm-project/vllm-omni/pull/8505)
 - **verl-omni:** Updated the SD3.5 V1 sync OCR recipe to use named rewards and added compatibility tests. [#695](https://github.com/verl-project/verl-omni/pull/695)
-- **MindSpore:** model ports covering [Shallow RNN](https://github.com/mindspore-ai/contrib/pull/234), [hierarchical memory for RL agents](https://github.com/mindspore-ai/contrib/pull/256), [Fisher-information analysis](https://github.com/mindspore-ai/contrib/pull/259), and [GANimation](https://github.com/mindspore-ai/contrib/pull/260)
+- **MindSpore:** Model ports covering [Shallow RNN](https://github.com/mindspore-ai/contrib/pull/234), [hierarchical memory for RL agents](https://github.com/mindspore-ai/contrib/pull/256), [Fisher-information analysis](https://github.com/mindspore-ai/contrib/pull/259), and [GANimation](https://github.com/mindspore-ai/contrib/pull/260).
 
 [All merged upstream PRs](https://github.com/search?q=author%3APinoeer-kingxi+is%3Apr+is%3Amerged+-user%3APinoeer-kingxi&type=pullrequests)
 
 ### Open PRs
 
+These contributions are not yet merged. Drafts are marked explicitly.
+
+- **SGLang-Omni:**
+  - Maintain PersonaPlex caller history incrementally, avoiding repeated full-history rebuilding. [#3103](https://github.com/sgl-project/sglang-omni/pull/3103)
+  - Warm the PersonaPlex session LM before server readiness. [#3104](https://github.com/sgl-project/sglang-omni/pull/3104)
+- **Megatron-LM:**
+  - Offload BF16/FLA GDN recurrence activations. [#7908](https://github.com/NVIDIA/Megatron-LM/pull/7908); extend recurrence offloading to GDN2 and Transformer Engine CUDA graphs. [#8308](https://github.com/NVIDIA/Megatron-LM/pull/8308) (draft)
+  - Fix forward chunk tracking for resident activation groups. [#8243](https://github.com/NVIDIA/Megatron-LM/pull/8243)
+  - Respect deterministic settings in fused pre-GDR gate backward. [#8244](https://github.com/NVIDIA/Megatron-LM/pull/8244)
+  - Log final DCP schedule balance and context-parallel size fractions. [#8431](https://github.com/NVIDIA/Megatron-LM/pull/8431)
+- **verl-omni:**
+  - Run native reward models on CPU. [#694](https://github.com/verl-project/verl-omni/pull/694)
+  - Stream named rewards per sample. [#730](https://github.com/verl-project/verl-omni/pull/730) (draft)
+  - Add diffusion V1 colocated asynchronous training. [#742](https://github.com/verl-project/verl-omni/pull/742) (draft)
 - **vLLM-Omni:**
-  - [Fix prefix-cache input replacement and request ownership](https://github.com/vllm-project/vllm-omni/pull/8221) (draft)
-  - [Fix Qwen3-Omni Code2Wav dtype handling](https://github.com/vllm-project/vllm-omni/pull/8327) (draft)
-  - [Add remote SeedVR2 video restoration to ComfyUI](https://github.com/vllm-project/vllm-omni/pull/8505) (open)
-- **Megatron-LM:** [Offload BF16/FLA GDN recurrence activations](https://github.com/NVIDIA/Megatron-LM/pull/7908) (draft)
-- **verl-omni:** [Run native reward models on CPU](https://github.com/verl-project/verl-omni/pull/694) (open)
-- **vLLM:** [Handle multimodal prefix-cache boundaries for Mamba models](https://github.com/vllm-project/vllm/pull/56818) (draft)
-- **Mooncake:** [Disaggregate multimodal inference and agent state](https://github.com/kvcache-ai/Mooncake/pull/2836) (open)
-- **Relax:** [Add speculative-decoding metrics for agentic rollouts](https://github.com/redai-studio/Relax/pull/391) (open)
+  - Preserve Qwen3-Omni Code2Wav embedding dtype. [#8327](https://github.com/vllm-project/vllm-omni/pull/8327)
+  - Route stages through configured pipeline transitions. [#8745](https://github.com/vllm-project/vllm-omni/pull/8745)
+  - Finalize replacement inputs and fence retired prefix-cache owners. [#8221](https://github.com/vllm-project/vllm-omni/pull/8221) (draft)
+  - Isolate NIXL payload ownership during request cleanup. [#8744](https://github.com/vllm-project/vllm-omni/pull/8744) (draft)
+  - Qwen3-Omni Talker codec lifecycle: [conditioning identity](https://github.com/vllm-project/vllm-omni/pull/8763), [replay after preemption](https://github.com/vllm-project/vllm-omni/pull/8764), [request-local decision batching](https://github.com/vllm-project/vllm-omni/pull/8765), and [request-end payload delivery](https://github.com/vllm-project/vllm-omni/pull/8766) (draft series)
+- **vLLM:** Handle multimodal prefix-cache boundaries for Mamba models. [#56818](https://github.com/vllm-project/vllm/pull/56818)
+- **Mooncake:** Disaggregate multimodal inference and agent state. [#2836](https://github.com/kvcache-ai/Mooncake/pull/2836)
+- **Relax:** Aggregate speculative-decoding metrics for agentic rollouts. [#391](https://github.com/redai-studio/Relax/pull/391)
+
+[All open upstream PRs](https://github.com/search?q=author%3APinoeer-kingxi+is%3Apr+is%3Aopen+-user%3APinoeer-kingxi&type=pullrequests)
 
 ## Projects
 
