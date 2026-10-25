@@ -16,6 +16,7 @@ I'm seeking internship opportunities in **efficient LLM inference and AI systems
 
 ### Merged
 
+- **verl-omni:** Added opt-in CPU placement for native reward models, with configurable Ray replicas and CPU resources. [#694](https://github.com/verl-project/verl-omni/pull/694)
 - **vLLM-Omni:** Added remote SeedVR2 video restoration to ComfyUI, preserving frame count, source FPS and supported audio, with cancellation handling and workflow templates. [#8505](https://github.com/vllm-project/vllm-omni/pull/8505)
 - **verl-omni:** Updated the SD3.5 V1 sync OCR recipe to use named rewards and added compatibility tests. [#695](https://github.com/verl-project/verl-omni/pull/695)
 - **MindSpore:** Model ports covering [Shallow RNN](https://github.com/mindspore-ai/contrib/pull/234), [hierarchical memory for RL agents](https://github.com/mindspore-ai/contrib/pull/256), [Fisher-information analysis](https://github.com/mindspore-ai/contrib/pull/259), and [GANimation](https://github.com/mindspore-ai/contrib/pull/260).
@@ -35,7 +36,6 @@ These contributions are not yet merged. Drafts are marked explicitly.
   - Respect deterministic settings in fused pre-GDR gate backward. [#8244](https://github.com/NVIDIA/Megatron-LM/pull/8244)
   - Log final DCP schedule balance and context-parallel size fractions. [#8431](https://github.com/NVIDIA/Megatron-LM/pull/8431)
 - **verl-omni:**
-  - Run native reward models on CPU. [#694](https://github.com/verl-project/verl-omni/pull/694)
   - Stream named rewards per sample. [#730](https://github.com/verl-project/verl-omni/pull/730) (draft)
   - Add diffusion V1 colocated asynchronous training. [#742](https://github.com/verl-project/verl-omni/pull/742) (draft)
 - **vLLM-Omni:**
